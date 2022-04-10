@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .keyboard {
+            width: 1124px;
+            height: 75vh;
+            background-color: #F2E6FF;
+            border-radius: 20px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        .keyboard_conteiner{
+            padding-top: 80px;
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+        .cnopki_group_f {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cnopki__f {
+            width: 60px;
+            height: 35px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family:'Courier New', Courier, monospace ;
+            margin-right: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px #ccc;
+        }
+        .cnopki_grp_number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 15px;
+        }
+        .cnopki {
+            width: 58px;
+            height: 58px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: 'Courier New', Courier, monospace;
+            margin-right: 15px;
+            border-radius:  8px;
+            box-shadow: 0 0 8px #ccc;
+            padding-right: 3px;
+        }
+        .cnopki_big {
+            width: 88px;
+            height: 60px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family:'Courier New', Courier, monospace ;
+            margin-right: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px #ccc;
+        }
+        .cnopki_grp_later{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 15px;
+        }
+        .cnopki_large{
+            width: 110px;
+            height: 60px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family:'Courier New', Courier, monospace ;
+            margin-right: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px #ccc;
+        }
+        .shift{
+            width: 141px;
+        }
+        .grp_strilku{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pad{
+            margin-top: 10px;
+        }
+        .haight_cnopki{
+            height: 80px;
+            width: 68px;
+        }
+        .haight_cnopki2{
+            height: 80px;
+            width: 78px;
+        }
+        .haight_cnopki3{
+            height: 80px;
+            width: 98px;
+        }
+        .probil{
+            height: 80px;
+            width: 233px;
+        }
+        .scrim{
+            display: none;
+            width: 100%;
+            height: 100vh;
+
+        }
+    </style>
+</head>
+<body>
+    <img class="scrim" id="scrims" src="img/images.jfif" alt="">
+    <div class="wrap">
+        <div class="keyboard">
+            <div class="keyboard_conteiner">
+                <div class="cnopki_group_f">
+                    <div class="cnopki__f" id="esc">esc</div>
+                    <div class="cnopki__f" id="f1">f1</div>
+                    <div class="cnopki__f" id="f2">f2</div>
+                    <div class="cnopki__f" id="f3">f3</div>
+                    <div class="cnopki__f" id="f4">f4</div>
+                    <div class="cnopki__f" id="f5">f5</div>
+                    <div class="cnopki__f" id="f6">f6</div>
+                    <div class="cnopki__f" id="f7">f7</div>
+                    <div class="cnopki__f" id="f8">f8</div>
+                    <div class="cnopki__f" id="f9">f9</div>
+                    <div class="cnopki__f" id="f10">f10</div>
+                    <div class="cnopki__f" id="f11">f11</div>
+                    <div class="cnopki__f" id="f12">f12</div>
+                    <div class="cnopki__f" id="EJECT">EJECT</div>
+                </div>
+                <div class="cnopki_grp_number">
+                    <div class="cnopki" id="qw">`~</div>
+                    <div class="cnopki" id="one">1!</div>
+                    <div class="cnopki" id="two">2@</div>
+                    <div class="cnopki" id="three">3#</div>
+                    <div class="cnopki" id="four">4$</div>
+                    <div class="cnopki" id="five">5%</div>
+                    <div class="cnopki" id="six">6^</div>
+                    <div class="cnopki" id="seven">7&</div>
+                    <div class="cnopki" id="eight">8*</div>
+                    <div class="cnopki" id="nine">9(</div>
+                    <div class="cnopki" id="zero">0)</div>
+                    <div class="cnopki" id="minus">-_</div>
+                    <div class="cnopki" id="plus">=+</div>
+                    <div class="cnopki_big" id="delet">delet</div>
+                </div>
+                <div class="cnopki_grp_later">
+                    <div class="cnopki_big" id="tab">tab</div>
+                    <div class="cnopki" id="q">Q</div>
+                    <div class="cnopki" id="w">W</div>
+                    <div class="cnopki" id="es">E</div>
+                    <div class="cnopki" id="r">R</div>
+                    <div class="cnopki" id="t">T</div>
+                    <div class="cnopki" id="y">Y</div>
+                    <div class="cnopki" id="u">U</div>
+                    <div class="cnopki" id="i">I</div>
+                    <div class="cnopki" id="o">O</div>
+                    <div class="cnopki" id="p">P</div>
+                    <div class="cnopki" id="duzga">[{</div>
+                    <div class="cnopki" id="duzga2">]}</div>
+                    <div class="cnopki" id="palka">\|</div>
+                </div>
+                <div class="cnopki_grp_later">
+                    <div class="cnopki_large" id="caps">caps lock</div>
+                    <div class="cnopki" id="a">A</div>
+                    <div class="cnopki" id="s">S</div>
+                    <div class="cnopki" id="d">D</div>
+                    <div class="cnopki" id="f">F</div>
+                    <div class="cnopki" id="g">G</div>
+                    <div class="cnopki" id="h">H</div>
+                    <div class="cnopki" id="j">J</div>
+                    <div class="cnopki" id="k">K</div>
+                    <div class="cnopki" id="l">L</div>
+                    <div class="cnopki" id="krapka">;:</div>
+                    <div class="cnopki" id="duga">'"</div>
+                    <div class="cnopki_large" id="enter">enter</div>
+                </div>
+                <div class="cnopki_grp_later">
+                    <div class="cnopki_large shift" id="shift">shift</div>
+                    <div class="cnopki" id="z">X</div>
+                    <div class="cnopki" id="x">Z</div>
+                    <div class="cnopki" id="c">C</div>
+                    <div class="cnopki" id="v">V</div>
+                    <div class="cnopki" id="b">B</div>
+                    <div class="cnopki" id="n">N</div>
+                    <div class="cnopki" id="m">M</div>
+                    <div class="cnopki" id="coma">,<</div>
+                    <div class="cnopki" id="cra">.></div>
+                    <div class="cnopki" id="znak">/?</div>
+                    <div class="cnopki_large shift" id="Shift">shift</div>
+                </div>
+                <div class="cnopki_grp_later">
+                    <div class="cnopki haight_cnopki" id="Fn">Fn</div>
+                    <div class="cnopki haight_cnopki2" id="Ctrl">control</div>
+                    <div class="cnopki haight_cnopki" id="opti">option</div>
+                    <div class="cnopki haight_cnopki3" id="com">command</div>
+                    <div class="cnopki probil" id="probil"></div>
+                    <div class="cnopki haight_cnopki3" id="Com">command</div>
+                    <div class="cnopki haight_cnopki" id="Op">option</div>
+                    <div class="grp_strilku">
+                        <div class="cnopki__f" id="livo"><img src="img/Polygon 2.png" alt=""></div>
+                        <div class="grp_cnoki_strilku">
+                            <div class="cnopki__f" id="top"><img src="img/Polygon 3.png" alt=""></div>
+                            <div class="cnopki__f pad" id="bottom"><img src="img/Polygon 4.png" alt=""></div>
+                        </div>
+                        <div class="cnopki__f" id="pravo"><img src="img/Polygon 1.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.body.onkeydown = function(e){
+            if(e.keyCode === 27){
+                esc.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 112){
+                f1.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 113){
+                f2.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 114){
+                f3.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 115){
+                f4.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 116){
+                f5.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 117){
+                f6.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 118){
+                f7.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 119){
+                f8.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 120){
+                f9.style.boxShadow = '0 0 5px #999'
+            }
+
+            if(e.keyCode === 121){
+                f10.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 122){
+                f11.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 123){
+                f12.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 192){
+                qw.style.boxShadow = '0 0 5px #999'
+            }if(e.keyCode === 49){
+                one.style.boxShadow = '0 0 5px #999'
+            }
+
+            if(e.keyCode === 50){
+                two.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 51){
+                three.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 52){
+                four.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 53){
+                five.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 54){
+                six.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 55){
+                seven.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 56){
+                eight.style.boxShadow = '0 0 5px #999'
+            }if(e.keyCode === 57){
+                nine.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 48){
+                zero.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 189){
+                minus.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 187){
+                plus.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 8){
+                delet.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 9){
+                tab.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 81){
+                q.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 87){
+                w.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 69){
+                es.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 82){
+                r.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 84){
+                t.style.boxShadow = '0 0 5px #999'
+            }
+
+            if(e.keyCode === 89){
+                y.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 85){
+                u.style.boxShadow = '0 0 5px #999'
+            } if(e.keyCode ===73){
+                i.style.boxShadow = '0 0 5px #999'
+            }
+
+             if(e.keyCode === 79){
+                o.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 80){
+                p.style.boxShadow = '0 0 5px #999'
+            }
+             if(e.keyCode === 219){
+                duzga.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 221){
+                duzga2.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 220){
+                palka.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 20){
+                caps.style.boxShadow = '0 0 5px #999'
+            }
+
+             if(e.keyCode === 65){
+                a.style.boxShadow = '0 0 5px #999'
+            }
+
+            if(e.keyCode === 83){
+                s.style.boxShadow = '0 0 5px #999'
+            }
+
+            if(e.keyCode === 68){
+                d.style.boxShadow = '0 0 5px #999'
+            }
+
+             if(e.keyCode === 70){
+                f.style.boxShadow = '0 0 5px #999'
+                scrims.style.display = 'flex';
+            }
+            if(e.keyCode === 71){
+                g.style.boxShadow = '0 0 5px #999'
+                scrims.style.display = 'none';
+            }
+
+            if(e.keyCode === 72){
+                h.style.boxShadow = '0 0 5px #999'
+            }
+             if(e.keyCode === 74){
+                j.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 75){
+                k.style.boxShadow = '0 0 5px #999'
+            } if(e.keyCode === 76){
+                l.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 186){
+                krapka.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 222){
+                duga.style.boxShadow = '0 0 5px #999'
+            } if(e.keyCode === 13){
+                enter.style.boxShadow = '0 0 5px #999'
+            }
+
+
+            if(e.keyCode === 16){
+                Shift.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 16){
+                shift.style.boxShadow = '0 0 5px #999'
+            }
+
+            if(e.keyCode === 88){
+                x.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 90){
+                z.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 67){
+                c.style.boxShadow = '0 0 5px #999'
+            }
+
+            if(e.keyCode === 86){
+                v.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 66){
+                b.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 78){
+                n.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 77){
+                m.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 54){
+                s.style.boxShadow = '0 0 5px #999'
+            }
+
+             if(e.keyCode === 188){
+                coma.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 190){
+                cra.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 191){
+                znak.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 17){
+                Fn.style.boxShadow = '0 0 5px #999'
+            }
+
+            if(e.keyCode === 17){
+                Ctrl.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 91){
+                opti.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 18){
+                com.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 18){
+                Com.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 91){
+                Op.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 32){
+                probil.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 37){
+                livo.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 38){
+                top.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 40){
+                bottom.style.boxShadow = '0 0 5px #999'
+            }
+            if(e.keyCode === 39){
+                pravo.style.boxShadow = '0 0 5px #999'
+            }
+
+
+        }
+        document.body.onkeyup = function(e){
+            if(e.keyCode === 27){
+                esc.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 112){
+                f1.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 113){
+                f2.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 114){
+                f3.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 115){
+                f4.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 116){
+                f5.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 117){
+                f6.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 118){
+                f7.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 119){
+                f8.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 120){
+                f9.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 121){
+                f10.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 122){
+                f11.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 123){
+                f12.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 192){
+                qw.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 49){
+                one.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 50){
+                two.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 51){
+                three.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 52){
+                four.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 53){
+                five.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 54){
+                six.style.boxShadow = '0 3px 10px #ccc'
+            }if(e.keyCode === 55){
+                seven.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 56){
+                eight.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 57){
+                nine.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 48){
+                zero.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 189){
+                minus.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 187){
+                plus.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 8){
+                delet.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 9){
+                tab.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 81){
+                q.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 87){
+                w.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 69){
+                es.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 82){
+                r.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 84){
+                t.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 89){
+                y.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 85){
+                u.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 73){
+                i.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 79){
+                o.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 80){
+                p.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 219){
+                duzga.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 221){
+                duzga2.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 20){
+                caps.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 220){
+                palka.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 65){
+                a.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 83){
+                s.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 68){
+                d.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 70){
+                f.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 71){
+                g.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 72){
+                h.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 74){
+                j.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 75){
+                k.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 76){
+                l.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 186){
+                krapka.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 222){
+                duga.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 13){
+                enter.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 16){
+                shift.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 16){
+                Shift.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 88){
+                x.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 90){
+                z.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 67){
+                c.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 86){
+                v.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 66){
+                b.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 78){
+                n.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 77){
+                m.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 188){
+                coma.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 190){
+                cra.style.boxShadow = '0 3px 10px #ccc'
+            }
+
+            if(e.keyCode === 191){
+                znak.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 17){
+                Fn.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 17){
+                Ctrl.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 91){
+                opti.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 18){
+                com.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 18){
+                Com.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 91){
+                Op.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 32){
+                probil.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 37){
+                livo.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 38){
+                top.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 40){
+                bottom.style.boxShadow = '0 3px 10px #ccc'
+            }
+            if(e.keyCode === 39){
+                pravo.style.boxShadow = '0 3px 10px #ccc'
+            }
+        }
+    </script>
+</body>
+</html>
